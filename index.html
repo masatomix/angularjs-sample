@@ -2,15 +2,23 @@
 <html ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="angular.js"></script>
   <script>
     angular.module('myApp', []);
     angular.module('myApp').controller('mainCtrl',function($scope){
+      $scope.value1 = "hello1";
       console.log("Hello World!!!!");
     });
   </script>
 </head>
+<!--
+ http://qiita.com/armorik83/items/5542daed0c408cb9f605
+-->
+<!--
+$scopeを使うバージョン
+-->
 <body ng-controller="mainCtrl">
+{{value1}} <br />
 Hello World.
 </body>
 </html>
