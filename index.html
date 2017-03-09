@@ -7,6 +7,7 @@
     angular.module('myApp', []);
     angular.module('myApp').controller('mainCtrl',function($scope){
       $scope.value1 = "hello1";
+      this.value1 = "hello2";
       console.log("Hello World!!!!");
     });
   </script>
@@ -15,10 +16,10 @@
  http://qiita.com/armorik83/items/5542daed0c408cb9f605
 -->
 <!--
-$scopeを使うバージョン
+as記法を用いて、thisアクセスするバージョン。$scopeを使わない。
 -->
-<body ng-controller="mainCtrl">
-{{value1}} <br />
+<body ng-controller="mainCtrl as main">
+{{main.value1}} <br />
 Hello World.
 </body>
 </html>
